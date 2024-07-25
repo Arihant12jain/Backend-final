@@ -42,7 +42,7 @@ route.delete('/User/:id',async (req,res)=>{
     return res.send(result);  
    })
 route.get('/User',async (req,res)=>{
-    const result=await User.find({}).populate('product');
+    const result=await User.find({});
   
     res.send(result);
 })
@@ -64,7 +64,7 @@ res.send({msg:"login Please"});
 })
 route.get('/:id',async (req,res)=>{
 
-    const result=await User.findOne({_id:req.params.id}).populate('product');
+    const result=await User.findOne({_id:req.params.id});
     if(!result){
         req.send({msg:"error"});
     }
