@@ -6,7 +6,6 @@ const app = express();
 const User = require('./routes/User');
 
 // Import JWT middleware
-const jwt = require('./helpers/jwt');
 
 // Middleware to parse JSON and URL-encoded data
 app.use(express.json());
