@@ -19,7 +19,7 @@ app.use(cors());
 // Define routes
 const Order=require('./routes/Order');
 app.get('/',(req,res)=>{
-  res.send("Server started");
+  res.send("Serverss started");
 })
 app.use('/user', User);
 app.use('/order',Order);
