@@ -5,7 +5,7 @@ const mongoose=require('mongoose')
 const User=require('../models/User')
 
 const route=express.Router();
-const jwt=require('jsonwebtoken');
+
 route.post('/login',async (req,res)=>{
   
     const one=await User.findOne({name:req.body.name});
